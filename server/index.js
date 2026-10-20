@@ -139,7 +139,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // 2. Admin Login (Username + Password)
-app.post("/api/login", (req, res) => {
+app.post(["/api/login", "/api/auth/login"], (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
